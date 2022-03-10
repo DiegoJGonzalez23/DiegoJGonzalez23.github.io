@@ -3,18 +3,63 @@
 body{
 
     height:100%;
+    display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: #e3e3e3;
+ 
+  
 
 
 }
 
-body{
+.Header{
   
-  display: flex;
+  
+  font-family: cursive;
+  text-decoration:underline;
+
+}
+
+.bodyy{
+  
+  max-width: 700px;
+  max-height:650px;
+
+  overflow:hidden;
+  text-indent: 20px;
+
+}
+
+.picture:hover{
+  background-color: #c6dabf;
+  border-radius: 100px;
+  color: black;
+  cursor: pointer;
+}
+
+#social { 
+  display :flex;
+  width: 279px;
+  height: 372px;
+  border-radius:150px;
+  background-position: center;
+  
+  align-items:center;
   justify-content: center;
   flex-direction: column;
-  align-items: center;
-  background: #9fd3c7;
-  font-family: cursive;
+}
 
+.buttoncontain {
+  
+  display: flex;
+  margin-top:30px;
+  margin-bottom: 0px;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 100px;
 
+  font-family: "Courier New", Courier, monospace;
 }
