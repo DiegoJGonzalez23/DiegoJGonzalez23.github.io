@@ -7,7 +7,7 @@ function help(){
     if(x%2==1){
 
 
-       image.src = "Pictures/IMG_3163 (2).PNG";
+       image.src = "Pictures/IMG_3163 (2).png";
 
         x++;
     }
