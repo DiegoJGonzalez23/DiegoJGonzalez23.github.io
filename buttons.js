@@ -12,7 +12,7 @@ function help(){
         x++;
     }
     else{
-        image.src = "Pictures/E3E3E3.jpg";
+        image.src="";
         x++;
     }
 
