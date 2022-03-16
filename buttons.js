@@ -1,4 +1,3 @@
-
 let x = 1;
 function help(){
 
@@ -12,7 +11,7 @@ function help(){
         x++;
     }
     else{
-        image.src="";
+        image.src="Pictures/img222.PNG";
         x++;
     }
 
