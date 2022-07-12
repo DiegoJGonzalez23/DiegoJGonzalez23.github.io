@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@500&family=Open+Sans:wght@500&display=swap');
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+ 
+}
 
 body {
 
@@ -6,103 +14,115 @@ body {
   
   flex-direction: column;
   align-items: center;
-  background: rgb(236, 227, 227);
+  background-color:#24252A;
  
 }
 
-.Header{
-  display:flex;
-  margin-right:370px;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  margin-bottom:0px;
-  
 
+p{
+  
+  font-size:25px;
+  
 }
-.Headerr{
-  display:flex;
-  
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
+li,a,button{
+  font-family: 'Edu VIC WA NT Beginner', cursive;
+  font-weight:500;
+  font-size:16px;
+  color:#edf0f1;
+  text-decoration:none;
+}
+a:hover{
+  transition: all 0.3s ease 0s;
+  color:#0088a9;
+}
+
+header{
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+  padding:30px 10%;
+}
+.nav__links{
+  list-style:none;
+}
+.nav__links li{
+display:inline-block;
+padding:0px 20px;
+}
+
+.nav__links li a{
+  transition: all 0.3s ease 0s;
+}
+.nav__links li a:hover{
+  transition: all 0.3s ease 0s;
+  color:#0088a9;
+}
+
+button{
+  padding:9px 25px;
+  background-color:rgba(0,136,169,1);
+  border:none;
+  border-radius:50px;
+  cursor:pointer;
+  transition: all 0.3s ease 0s;
+  margin-left:850px;
+}
+button:hover{
+  
+  background-color:rgba(0,136,169,0.8);
+ 
+}
+
+.typewriter{
+  margin-top:150px;
+}
+.typewriter p {
+  
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .10em; /* Adjust as needed */
+  animation: 
+    typing 5s steps(70, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+
+.funfacts{
+  margin-top:300px;
+  margin-bottom:80px;
+  font-family: 'Edu VIC WA NT Beginner', cursive;
+  color: #f3eae8;
+}
+
+.header_resume{
+  font-family: 'Edu VIC WA NT Beginner', cursive;
+  color:#edf0f1;
+  font-size:18px;
+  margin-bottom:15px;
 }
 
 .bodyy{
-  
-  max-width: 800px;
-  max-height:1650px;
-
-  overflow:hidden;
-  text-indent: 20px;
-
+  margin-top:20px;
 }
 
-.picture:hover{
-  
-  border-radius: 20px;
-  color: black;
-  cursor: pointer;
+#videotutorialhead{
+  font-family: 'Edu VIC WA NT Beginner', cursive;
+  color:#edf0f1;
+  font-size:20px;
 }
-
-#social { 
-  display :flex;
-  width: 279px;
-  height: 372px;
-  margin-left:250px;
-  border-radius:150px;
-  background-position: center;
-  
-  align-items:center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.buttoncontain {
-  display:flex;
-  
-  
-  margin-left:300px;
-  margin-top: 10px;
-  margin-bottom:10px;
-  border-radius:20px;
-  background-color:   #00BFFF;
-
-  color:white;
-  padding: 1em 1.5em;
-  text-decoration: none;
-  text-transform: uppercase;
-  max-width:fit-content;
-  border: 2px solid maroon;
-}
-
-
-
-a
-{
-  display:flex;
-  flex-direction: row;
- 
-  margin-bottom:5px;
-  border-radius:15px;
-  background-color: #ff3b5f;
-  color:white;
-  padding: 1em 1.5em;
-  text-decoration: none;
-  text-transform: uppercase;
-  max-width:fit-content;
-  border:3px solid black;
-  
-}
-.boxed{
-  border:2px solid brown;
-  background:rgb(248, 244, 244);
-}
-hr {
-  width: 47%;
-   height: 1px;
-   border: 0 none;
-   margin-right: auto;
-   margin-left: auto;
-   margin-top: 80px;
-   margin-bottom:90px;
-   background-color:rgb(31, 29, 29);
-   
-} 

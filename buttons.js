@@ -19,3 +19,18 @@ function help(){
 
 
 }
+
+function dothis(){
+
+
+    location.href="https://www.linkedin.com/in/diego-gonzalez-7a822a212/";
+}
+
+function timeSince(){
+
+
+    var mydate = new Date();
+    var yearsince = mydate.getFullYear()-2020;
+    var monthsince = mydate.getMonth-4;
+    
+}
