@@ -22,6 +22,7 @@ body {
 p{
   
   font-size:25px;
+  color:#f3eae8;
   
 }
 
@@ -31,6 +32,7 @@ li,a,button{
   font-size:16px;
   color:#edf0f1;
   text-decoration:none;
+  
 }
 a:hover{
   transition: all 0.3s ease 0s;
@@ -66,7 +68,7 @@ button{
   border-radius:50px;
   cursor:pointer;
   transition: all 0.3s ease 0s;
-  margin-left:850px;
+  
 }
 button:hover{
   
@@ -125,4 +127,109 @@ button:hover{
   font-family: 'Edu VIC WA NT Beginner', cursive;
   color:#edf0f1;
   font-size:20px;
+}
+
+.gitty{
+  border-radius:50%;
+}
+
+.cta{
+  margin-left:750px;
+}
+
+#equation{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color:#f3eae8;
+  margin-top:50px;
+  margin-bottom:50px;
+}
+
+
+.buttonmath{
+  margin-right: 50px;
+}
+footer{
+  margin-top:50px;
+}
+
+#answer{
+  border: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #f2f2f2;
+  padding: var(--field-padding);
+  border-radius: 5px;
+  width: 100px;
+  outline: none;
+  font-size: 14px;
+  text-align:center;
+  
+}
+#counterr{
+  margin-left:20px;
+}
+.bottomcount{
+  display:flex;
+  flex-direction:row;
+}
+
+.popup{
+  width:300px;
+  top:0;
+  background:#233142;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%) scale(0.1);
+  text-align:center;
+  padding: 10px 30px 30px;
+  color:#333;
+  border-radius:5%;
+  visibility:hidden;
+  transition: transform .4s, top .4s;
+  
+}
+
+.open-popup{
+  visibility:visible;
+  top:60%;
+  transform: translate(-50%,-50%) scale(1);
+
+}
+.close-popup{
+  visibility:hidden;
+  
+  transform: translate(-50%,-50%) scale(.1);
+
+
+}
+
+.popup h2{
+  font-size:38px;
+  font-weight:500;
+  margin:30px 0 10px;
+  font-family:'Poppins',sans-serif;
+  color:#f3eae8;
+}
+
+#yalost{
+  border-radius:50%;
+  margin-top:-50px;
+  border-radius:50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  
+}
+
+.popup button{
+  width:100%;
+  margin-top:40px;
+  padding: 10px 0;
+  border:0;
+  outline:none;
+  font-size:16px;
+  border-radius:4px;
+  cursor:pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }

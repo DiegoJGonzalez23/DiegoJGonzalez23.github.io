@@ -4,7 +4,11 @@
         <link type="text/css" href="style.css" rel="stylesheet" />
         <title>Diego Gonzalez's Website</title>
         <meta name="description" content="Diego Gonzalez, a rising high school senior created this website to display personal projects.">
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
         <script src="buttons.js"></script>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.3/dayjs.min.js"></script>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.3/plugin/duration.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.3/plugin/relativeTime.min.js"></script>
 
   
     </head>
@@ -12,27 +16,39 @@
     <body>
         <header>
             <nav>
-                <ul class="nav__links">
+                <ul class="nav__links">  <!-- This is the navigation bar-->
                     <li><a href="resume.html">Resume</a></li>
                     <li><a href="VideoTutorials.html">Computer Science Tutorials</a></li>
+                    <li><a href="mathgame.html">Math Game</a></li>
                     <li><a href="aboutme.html">About Me</a></li>
 
                 </ul>
-            </nav>
-            <a class="cta" href="#" ><button onclick="dothis()">Contact me</button></a>
+            </nav>  
+            <a class="cta" href="#" ><button onclick="dothis()">Contact me</button></a> <!-- This is Contact me button-->
+
+            
         </header>
+        
+
 
 
             <div class="typewriter">
                 <p>  
-                        Hi it's me! This will be the website to store personal projects and experiment with my HTML/CSS skills
+                        Hi it's me! This will be the website to store personal projects and experiment with my HTML/CSS skills.
                 </p>
             </div>
             <div class="funfacts">
-                <p>Days since I started programming: 828</p>
+                <p id="daysince">Days since I started programming: 828</p> 
                 <p>College: Undecided</p>
                 <p>Favorite Show: You</p>
             </div>
-           
+            <div class="links">
+                <a href = "https://github.com/DiegoJGonzalez23" target="_blank"><img class = "gitty" height=50 src = "Pictures/github1.jpg"/></a>
+            </div>
+
+    <script>
+        
+        setInterval(update_dayssince(),1000*60*60*24);
+    </script>  
     </body>
 </html>

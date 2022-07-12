@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<head>
+    <link type="text/css" href="style.css" rel="stylesheet" />
+    <title>Diego Gonzalez | Math Game</title>
+    <script src="buttons.js"></script>
+
+  
+</head>
+
+<body>
+   
+   <p id="equation">Press start to begin your math adventures</p>
+
+
+   <input type="text" id = "answer">
+
+        
+  
+
+
+
+    <footer>
+        <button class="buttonmath" type="button" onClick="make_eq()">Start</button>
+        <button class="buttonmath" type="button" onClick="check_answer()">Submit</button>
+        <a href = "index.html" >Main Page</a>
+
+    </footer>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="bottomcount">
+        <p>Current Score:    </p>
+        <p id ="counterr">0</p>
+    </div>
+
+    <div class="popup" id = "popup">
+        <img   id="yalost" width = 150 src="Pictures/redx.jpg">
+        <h2> You lost :(</h2>
+        <p> Thank you for playing!</p>
+        <p> Your time was:  </p>
+        <button type="button" onclick="closepopup()">OK</button>
+
+    </div>
+    
+
+
+</body>
