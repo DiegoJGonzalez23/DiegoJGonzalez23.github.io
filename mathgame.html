@@ -14,7 +14,8 @@
    
 
 
-   <input type="text" id = "answer">
+   <input type="text" id = "answer" onkeydown = "if (event.keyCode == 13)
+   document.getElementById('submitbutton').click()">
 
         
   
@@ -23,7 +24,7 @@
 
     <footer>
         <button class="buttonmath" id="startbutton" type="button" onClick="start_end()">START</button>
-        <button class="buttonmath" type=submit onClick="check_answer()">Submit</button>
+        <button class="buttonmath" type=submit  id = "submitbutton" onClick="check_answer()">Enter Answer</button>
         <a href = "index.html" >Main Page</a>
 
     </footer>

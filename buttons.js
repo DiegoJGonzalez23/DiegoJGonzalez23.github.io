@@ -47,8 +47,11 @@ function check_answer(){
         make_eq();
         document.getElementById("answer").value = "";
         update_count();
+        
     }
-    else{ // you got it wrong// have to make new game send their score and do other stuff
+    else{
+       
+         // you got it wrong// have to make new game send their score and do other stuff
         // Show time when you got it wrong or ended
         clearInterval(myTimer);
         var changetimeonpopup = document.getElementById("timeend");
@@ -136,3 +139,11 @@ function tick(){
     }
     
 }
+
+// Enter WORKS ON MATH GAME NOW 
+document.getElementById("answer").addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("submitbutton").click();
+    }
+});
