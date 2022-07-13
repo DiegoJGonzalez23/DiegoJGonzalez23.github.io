@@ -181,7 +181,7 @@ footer{
   top:0;
   background:#233142;
   position:absolute;
-  top:60%;
+  top:57%;
   left:50%;
   transform: translate(-50%,-50%) scale(0.1);
   text-align:center;
@@ -195,7 +195,7 @@ footer{
 
 .open-popup{
   visibility:visible;
-  top:60%;
+  top:57%;
   transform: translate(-50%,-50%) scale(1);
 
 }
