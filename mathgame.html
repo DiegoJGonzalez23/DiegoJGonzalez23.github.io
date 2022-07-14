@@ -13,21 +13,19 @@
    <p id="equation">Press start to begin your math adventures.</p>
    
 
-
-   <input type="text" id = "answer" onkeydown = "if (event.keyCode == 13)
-   document.getElementById('submitbutton').click()">
-
+    
+   <input type="text" id = "answer" onkeydown = "if (event.keyCode == 13)document.getElementById('submitbutton').click()">
+    <br>
         
   
 
 
 
-    <footer>
+    <div id = "buttonsformath">
         <button class="buttonmath" id="startbutton" type="button" onClick="start_end()">START</button>
-        <button class="buttonmath" type=submit  id = "submitbutton" onClick="check_answer()">Enter Answer</button>
-        <a href = "index.html" >Main Page</a>
-
-    </footer>
+        <button class="buttonmath"   id = "submitbutton" onClick="check_answer()">ANSWER</button>
+        
+    </div>
     <br>
     <br>
     <br>
@@ -37,7 +35,7 @@
     <div class="bottomcount">
         <p>Current Score:    </p>
         <p id ="counterr">0</p>
-        <p> /50</p>
+        <p id="totalq">/25</p>
     </div>
     <br>
     <div class="stopwatch">
@@ -50,16 +48,52 @@
 
 
     </div>
+    <br>
+    <button class="buttonmath"   id = "settingsbutton" onClick="show_settings()">SETTINGS</button>
+    <br>
+    <div id = "settingsfinal">
+
+        <p id="settingstitle">Settings:</p>
+        <br>
+        <div class = "settings">
+        
+        <div class="textboxes">
+            <input type="text" id="numberquestions" placeholder="Number of Questions">
+            <input type="text" id="maxint" placeholder="Max Integer asked (1-100)">
+
+        </div>    
+        <br>
+        <div class="checkboxes">
+
+    
+            <input type="checkbox" id="adding">
+            <label for="add">Addition?</label>
+
+            <input type="checkbox" id="subtract">
+            <label for="sub">Subtraction?</label>
+
+            <input type="checkbox" id="multiply">
+            <label for="mult">Multiplication?</label>
+        </div>
+
+
+        </div>
+    </div>
+
+
+
 
     <div class="popup" id = "popup">
         <img   id="yalost" width = 150 src="Pictures/redx.jpg">
-        <h2> You lost :(</h2>
-        <p> Thank you for playing!</p>
+        <h2 id="popuptitle"> You lost :(</h2>
+        <p id = "popupsubtitle"> Thank you for playing!</p>
         <p id="timeend"> Your time was:  </p>
         <p id="finalscore">Your score was: </p>
         <button type="button" onclick="closepopup()">OK</button>
 
     </div>
+    <br>
+    <a href = "index.html" >Main Page</a>
     
 
 

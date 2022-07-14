@@ -142,18 +142,22 @@ button:hover{
   color:#f3eae8;
   margin-top:50px;
   margin-bottom:50px;
-  font-size:30px;
+  font-size:45px;
+  text-align:center;
+  align-items:center;
+
 }
 
 
 .buttonmath{
-  margin-right: 50px;
+  margin-right: 13px;
+  margin-left:13px;
 }
 footer{
   margin-top:50px;
 }
 
-#answer{
+#answer, #numberquestions, #maxint{
   border: none;
   -webkit-appearance: none;
   -ms-appearance: none;
@@ -167,7 +171,16 @@ footer{
   font-size: 20px;
   text-align:center;
   
+  
 }
+
+#numberquestions, #maxint{
+  
+  width: 250px;
+  
+  
+}
+
 #counterr{
   margin-left:20px;
 }
@@ -181,7 +194,7 @@ footer{
   top:0;
   background:#233142;
   position:absolute;
-  top:57%;
+  top:65%;
   left:50%;
   transform: translate(-50%,-50%) scale(0.1);
   text-align:center;
@@ -195,7 +208,7 @@ footer{
 
 .open-popup{
   visibility:visible;
-  top:57%;
+  top:65%;
   transform: translate(-50%,-50%) scale(1);
 
 }
@@ -213,6 +226,10 @@ footer{
   margin:30px 0 10px;
   font-family:'Poppins',sans-serif;
   color:#f3eae8;
+}
+h2{
+  color:#f3eae8;
+  font-size:20px;
 }
 
 #yalost{
@@ -238,4 +255,38 @@ footer{
 .stopwatch{
   display:flex;
   flex-direction:row;
+}
+
+label{
+  color:#f3eae8;
+
+}
+
+.checkboxes{
+  text-align:center;
+}
+
+#settingstitle{
+  text-align:center;
+}
+
+.close-settings{
+  visibility:hidden;
+}
+
+#buttonsformath{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  text-align:center;
+  
+}
+
+.open-settings{
+  visibility:visible;
+  
+}
+
+#settingsfinal{
+  visibility:hidden;
 }
