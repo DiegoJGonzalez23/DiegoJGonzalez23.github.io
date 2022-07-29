@@ -1,4 +1,6 @@
 // CTRL+ K CTRL 0 folds functions and CTRL K CTRL J unfolds
+
+/*Home page------------------------------------------------------------------------------------------------------------------- */
 function dothis(){
 
 
@@ -6,6 +8,149 @@ function dothis(){
 }
 
 /*Home page------------------------------------------------------------------------------------------------------------------- */
+
+/*Gambling Game*/
+var balance = 500.0;
+
+
+function random_dice(){
+    console.log(1);
+    var betamount = document.getElementById("betamount").value;
+    
+    var percent = document.getElementById("percent").value;
+    var xx = Math.random()*100;
+    var yy = parseInt(percent);
+    if(betamount>balance){
+        document.getElementById("errorsgambling").innerHTML = "Your balance is too low for this type of bet. Smarten up kid";
+        
+        setTimeout(function(){document.getElementById("errorsgambling").innerHTML = '';}, 3000); //removes message after 3s
+    }
+
+    else if(percent>=100){
+        document.getElementById("errorsgambling").innerHTML = "You can't do a percentage this big. Smarten up kid";
+        
+        setTimeout(function(){document.getElementById("errorsgambling").innerHTML = '';}, 3000); //removes message after 3s
+    }
+
+    else if(xx < yy){
+        // You win your bet
+        console.log(2);
+        balance += (betamount)*(100-parseInt(percent)) / (parseInt(percent));
+        console.log(balance);
+        var audio = document.getElementById("audio");
+        if(audio.volume == 0){
+            audio.play();
+        }
+        else{
+            audio.volume=0.4;
+            audio.play();
+
+        }
+        
+        
+
+
+    }
+    else{
+        // You lose your bet
+        balance -= betamount;
+    }
+
+    // Reset inputs and change balance
+    if(balance < 500){
+        document.getElementById("balancenumber").style.color="red";
+        // You have negative  balance
+    }
+    if(balance>=500){
+        document.getElementById("balancenumber").style.color="#7dd87d"; 
+    }
+
+    if(balance==0){
+        gonebroke();
+    }
+
+
+
+
+
+    balance = parseFloat(balance.toFixed(2));
+    document.getElementById("balancenumber").innerHTML = "$" + balance;
+    document.getElementById("percent").value="";
+    document.getElementById("betamount").value="";
+}
+
+var counterofmute = 1;
+function muteorunmute(){
+    if(counterofmute % 2 == 1){
+        var audio = document.getElementById("audio");
+        audio.volume = 0;
+        
+        document.getElementById("changevolume") = "Pictures/volumeoff.png";
+        
+
+    }
+
+    else{
+        document.getElementById("changevolume").src = "Pictures/volumeon.png";
+        var audio = document.getElementById("audio");
+        audio.volume = 0.4;
+
+    }
+
+    counterofmute++;
+}
+
+function showpopupgambling(){
+    document.getElementById("balanceatend").innerHTML  = "You had $" + balance+ " at the end.";
+    document.getElementById("popupgambling").style.visibility = "visible";
+    document.getElementById("popupgambling").style.transform = "translate(-50%,-50%) scale(1)";
+   
+
+
+
+}
+
+function gamblingok(){
+    // fix balance, display it, and change color to green, clear inputs
+    balance = 500;
+    document.getElementById("balancenumber").style.color="#7dd87d";
+    document.getElementById("balancenumber").innerHTML = "$" + balance.toFixed(2);
+    document.getElementById("percent").value="";
+    document.getElementById("betamount").value="";
+
+    // close popup
+    document.getElementById("popupgambling").style.visibility = "hidden";
+    document.getElementById("popupgambling").style.transform = "translate(-50%,-50%) scale(.1)";
+
+    // change popup to the pop up end you end gambling session
+    document.getElementById("gamblingpic").src = "Pictures/moneygreen.png";
+    document.getElementById("popuptitlegambling").innerHTML = "You ended your gambling session";
+    document.getElementById("popupsubtitlegambling").innerHTML = "You still had money so I consider that a win!</p>";
+
+    
+}
+
+function gonebroke(){
+    // messages of losing all money
+    document.getElementById("popuptitlegambling").innerHTML = "The gambling session has ended since you have no money."
+    document.getElementById("popupsubtitlegambling").innerHTML = "How could you do this, you had $500 to start?";
+    document.getElementById("balanceatend").innerHTML  = "You had no money at the end :(";
+
+    //broke pic
+    document.getElementById("gamblingpic").src = "Pictures/nomoney.png";
+
+    //making popup visible
+    document.getElementById("popupgambling").style.visibility = "visible";
+    document.getElementById("popupgambling").style.transform = "translate(-50%,-50%) scale(1)";
+    
+
+}
+
+
+/*Gambling Game*/
+
+
+/*Math game------------------------------------------------------------------------------------------------------------------------- */
 var num1;
 var num2;
 var maxintjs = 50;
@@ -333,7 +478,7 @@ function update_count(){
 // checks score and updates score when you get something right or when you win  ---------
 
 
-// STOPWATCH FOR MATH GAME----------------------------------------------------------------------------------------------
+// STOPWATCH FOR MATH GAME------------------------------------------------------------------------
 var timeelapsed = 0; //seconds elapsed
 var minutespassed = 0;
 function tick(){
@@ -361,8 +506,8 @@ function tick(){
     }
     
 }
-// STOPWATCH FOR MATH GAME----------------------------------------------------------------------------------------------
+// STOPWATCH FOR MATH GAME---------------------------------------------------------------------------
 
 
 
-/*Math game--------------------------------------------------------------------------------------------------- */
+/*Math game------------------------------------------------------------------------------------------------------------------------- */

@@ -1,22 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@500&family=Open+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,200&family=Uchen&display=swap');
 *{
   box-sizing:border-box;
   margin:0;
   padding:0;
  
 }
-
-body {
+body{
+  background-color:#24252A; 
+}
+main {
 
   height:100%;
   display: flex;
   
   flex-direction: column;
-  align-items: center;
+  align-items:center;
   background-color:#24252A; 
  
 }
+.headeraboutme, .headervideos{
+  height:100%;
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+  margin-bottom:18px;
+}
+
 
 
 p{
@@ -39,14 +50,24 @@ a:hover{
   color:#0088a9;
 }
 
-header{
+.headermain {
   display:flex;
-  justify-content:flex-start;
+  justify-content:space-between;
   align-items:center;
-  padding:30px 10%;
+  background-color:#24252A; 
+  padding:25px 10%;
+}
+footer{
+  background-color:#24252A; 
+  display:flex;
+  flex-direction:column;
+  align-items:center;
 }
 .nav__links{
+  
   list-style:none;
+  
+ 
 }
 .nav__links li{
 display:inline-block;
@@ -68,6 +89,7 @@ button{
   border-radius:50px;
   cursor:pointer;
   transition: all 0.3s ease 0s;
+  justify-content:right;
   
 }
 button:hover{
@@ -76,37 +98,142 @@ button:hover{
  
 }
 
-.typewriter{
-  margin-top:150px;
-}
-.typewriter p {
+.css-typing{
+  margin-top:170px;
   
-  color: #fff;
-  font-family: monospace;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .10em; /* Adjust as needed */
-  animation: 
-    typing 5s steps(70, end),
-    blink-caret .5s step-end infinite;
+}
+.css-typing p {
+  border-right: .15em solid orange;
+  font-family: "Courier";
+  font-size: 25px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.css-typing p:nth-child(1) {
+  width: 21em;
+  -webkit-animation: type 3s steps(40, end);
+  animation: type 3s steps(40, end);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+.css-typing p:nth-child(2) {
+  margin-top:5px;
+  width: 21em;
+  opacity: 0;
+  -webkit-animation: type2 3s steps(40, end);
+  animation: type2 3s steps(40, end);
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange }
+.css-typing p:nth-child(3) {
+  margin-top:5px;
+  width: 21em;
+  opacity: 0;
+  -webkit-animation: type3 3s steps(40, end), blink .5s step-end infinite alternate;
+  animation: type3 3s steps(40, end), blink .5s step-end infinite alternate;
+  -webkit-animation-delay: 6s;
+  animation-delay: 6s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    border: none;
+  }
+}
+
+@-webkit-keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    border: none;
+  }
+}
+
+@keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@-webkit-keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@keyframes type3 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes type3 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    border-color: tranparent;
+  }
 }
 
 .funfacts{
-  margin-top:300px;
+  margin-top:230px;
   margin-bottom:80px;
   font-family: 'Edu VIC WA NT Beginner', cursive;
   color: #f3eae8;
@@ -133,8 +260,8 @@ button:hover{
   border-radius:50%;
 }
 
-.cta{
-  margin-left:750px;
+.trymoveright{
+  text-align:right;
 }
 
 #equation{
@@ -157,7 +284,7 @@ footer{
   margin-top:50px;
 }
 
-#answer, #numberquestions, #maxint{
+#answer, #numberquestions, #maxint, #percent, #betamount{
   border: none;
   -webkit-appearance: none;
   -ms-appearance: none;
@@ -232,7 +359,8 @@ h2{
   font-size:20px;
 }
 
-#yalost{
+
+#yalost, #gamblingpic{
   border-radius:50%;
   margin-top:-50px;
   border-radius:50%;
@@ -289,4 +417,94 @@ label{
 
 #settingsfinal{
   visibility:hidden;
+}
+
+
+#balancetext{
+  font-family: 'Roboto Mono', monospace;
+}
+#balancenumber{
+  color:#7dd87d; 
+}
+.dice{
+  font-family: 'Roboto Mono', monospace;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  
+  
+}
+
+.inputsfordice{
+  margin-top:10px;
+}
+.selectionofgames{
+  display:flex;
+  flex-direction:column;
+
+}
+
+#headergambling{
+  color:#ffe9e3; 
+  font-family: 'Roboto Mono', monospace;
+}
+#subheadinggabmling{
+  color:#ffe9e3;  
+  font-family: 'Roboto Mono', monospace;
+}
+
+h3{
+  color:#f3eae8;
+}
+
+.changevolume{
+
+  padding:0px 0px;
+  height:45px;
+  border:none;
+  border-radius:70px;
+
+}
+.changevolume:hover{
+  cursor:pointer;
+}
+.buttonandvolume{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+}
+
+.popupgambling{
+  width:350px;
+  top:0;
+  background:#233142;
+  position:absolute;
+  top:66%;
+  left:50%;
+  transform: translate(-50%,-50%) scale(0.1);
+  text-align:center;
+  padding: 10px 30px 30px;
+  color:#333;
+  border-radius:5%;
+  visibility:hidden;
+  transition: transform 1s, top 1s;
+  
+}
+
+
+
+
+.popupgambling h2{
+  font-family: 'Roboto Mono', monospace;
+  color: #ffe9e3;  
+}
+
+.popupgambling p{
+  font-family: 'Roboto Mono', monospace;
+  color: #ffe9e3;  
+}
+
+#errorsgambling{
+  font-family: 'Roboto Mono', monospace;
+  color:red;
 }
