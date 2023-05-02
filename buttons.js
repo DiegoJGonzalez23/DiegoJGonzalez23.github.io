@@ -9,6 +9,12 @@ function dothis(){
 
 /*Home page------------------------------------------------------------------------------------------------------------------- */
 
+/* Ortho Solver
+function makematrix(){
+    
+}
+
+
 /*Gambling Game*/
 var balance = 500.0;
 
